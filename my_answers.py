@@ -23,7 +23,12 @@ def window_transform_series(series,window_size):
 
 # TODO: build an RNN to perform regression on our time series input/output data
 def build_part1_RNN(step_size, window_size):
-    pass
+    model = Sequential()
+    model.add(LSTM(5,input_shape=(window_size,1)))
+    model.add(Dense(1))
+    optimizer = keras.optimizers.RMSprop(lr=0.001, rho=0.9, epsilon=1e-08, decay=0.0)
+    model.compile(loss='mean_squared_error', optimizer=optimizer)
+    return model
 
 
 ### TODO: list all unique characters in the text and remove any non-english ones
