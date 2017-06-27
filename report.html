@@ -13355,7 +13355,7 @@ GGMaIUsAjDHGmEbIEgBjjDGmEfr/K6Z/mRw5ZxcAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># read in the text, transforming everything to lower case</span>
@@ -13397,7 +13397,7 @@ GGMaIUsAjDHGmEbIEgBjjDGmEfr/K6Z/mRw5ZxcAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### print out the first 1000 characters of the raw text to get a sense of what we need to throw out</span>
@@ -13414,7 +13414,7 @@ GGMaIUsAjDHGmEbIEgBjjDGmEfr/K6Z/mRw5ZxcAAAAASUVORK5CYII=
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[27]:</div>
+<div class="prompt output_prompt">Out[3]:</div>
 
 
 
@@ -13441,7 +13441,7 @@ GGMaIUsAjDHGmEbIEgBjjDGmEfr/K6Z/mRw5ZxcAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### find and replace &#39;\n&#39; and &#39;\r&#39; symbols - replacing them </span>
@@ -13466,7 +13466,7 @@ GGMaIUsAjDHGmEbIEgBjjDGmEfr/K6Z/mRw5ZxcAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### print out the first 1000 characters of the raw text to get a sense of what we need to throw out</span>
@@ -13483,7 +13483,7 @@ GGMaIUsAjDHGmEbIEgBjjDGmEfr/K6Z/mRw5ZxcAAAAASUVORK5CYII=
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[29]:</div>
+<div class="prompt output_prompt">Out[5]:</div>
 
 
 
@@ -13511,13 +13511,14 @@ GGMaIUsAjDHGmEbIEgBjjDGmEfr/K6Z/mRw5ZxcAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### TODO: list all unique characters in the text and remove any non-english ones</span>
 <span class="c1"># find all unique characters in the text</span>
 <span class="kn">import</span> <span class="nn">re</span>
-<span class="n">unique</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">text</span><span class="p">)</span>
+<span class="n">unique</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">text</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">unique</span><span class="p">)</span>
 
 <span class="c1"># remove as many non-english characters and character sequences as you can </span>
 <span class="n">non_english</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">unique</span> <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[a-zA-z !,.:;?]&#39;</span><span class="p">,</span><span class="n">x</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">]</span>
@@ -13530,6 +13531,24 @@ GGMaIUsAjDHGmEbIEgBjjDGmEfr/K6Z/mRw5ZxcAAAAASUVORK5CYII=
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;%&#39;, &#39;0&#39;, &#39;4&#39;, &#39;é&#39;, &#39;j&#39;, &#39;f&#39;, &#39;7&#39;, &#39;-&#39;, &#39;?&#39;, &#39;d&#39;, &#39;.&#39;, &#39;p&#39;, &#39;v&#39;, &#39;t&#39;, &#39;5&#39;, &#39;e&#39;, &#39;r&#39;, &#39;a&#39;, &#39;)&#39;, &#39;*&#39;, &#39;b&#39;, &#39;h&#39;, &#39;(&#39;, &#39;9&#39;, &#39;l&#39;, &#39;:&#39;, &#39;&amp;&#39;, &#39;$&#39;, &#39;m&#39;, &#39;w&#39;, &#39;!&#39;, &#39;&#34;&#39;, &#39; &#39;, &#39;2&#39;, &#39;,&#39;, &#39;k&#39;, &#39;;&#39;, &#39;6&#39;, &#39;è&#39;, &#39;i&#39;, &#39;y&#39;, &#39;s&#39;, &#39;o&#39;, &#39;c&#39;, &#39;à&#39;, &#39;8&#39;, &#39;@&#39;, &#39;3&#39;, &#39;/&#39;, &#39;z&#39;, &#39;1&#39;, &#39;q&#39;, &#39;x&#39;, &#39;u&#39;, &#34;&#39;&#34;, &#39;â&#39;, &#39;g&#39;, &#39;n&#39;]
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
